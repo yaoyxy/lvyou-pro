@@ -1,6 +1,6 @@
 <template>
   <div id="app1">
-    <div style="margin: 0 auto">
+    <div style="margin: 0 auto; height: 100vh; overflow: hidden">
       <div class="zdy-a">
         <div>
           <img src="../assets/tubiao.png" alt="" />
@@ -24,15 +24,21 @@
         muted
         loop
       ></video>
-
-      <div style="height: 300px; width: 100%; background: #000"></div>
-      <div
-        style="height: 300px; width: 100%; background: rgba(0, 0, 0, 0.5)"
-      ></div>
-      <div style="height: 800px; background: white"></div>
     </div>
+
+    <div style="height: 300px; width: 100%; background: #fff"></div>
+    <div
+      style="height: 300px; width: 100%; background: rgba(0, 0, 0, 0.5)"
+    ></div>
+    <div style="height: 800px; background: white"></div>
   </div>
 </template>
+<script>
+export default {
+  
+};
+</script>
+
 
 <style lang="scss">
 // #app1 {
@@ -56,7 +62,7 @@
   // background:rgba(51,110,198,0.6)
 }
 .zdy-a {
-  background: rgba(51, 110, 198, 0.6);
+  background: rgba(51, 110, 198, 0.5);
   color: white;
   text-align: center;
   width: 100%;
@@ -69,7 +75,7 @@
   div h1 {
     font-size: 48px;
   }
-  span{
+  span {
     font-size: 18px;
   }
   .btn {

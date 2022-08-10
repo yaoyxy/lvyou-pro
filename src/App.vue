@@ -21,12 +21,12 @@ export default {
   margin: 0;
   padding: 0;
 }
-#app {
+/* #app {
   width: 100%;
   // width: 1690.67px;
   // overflow-x: hidden;
   margin: 0 auto;
   // .center {
   // }
-}
+} */
 </style>

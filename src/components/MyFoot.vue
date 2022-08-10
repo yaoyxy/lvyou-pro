@@ -3,12 +3,12 @@
     <div class="foot">
       <!-- 第一列 -->
       <div class="zdy-one">
-        <h3>联系我们</h3>
+        <h2>联系我们</h2>
         <p>/ contact</p>
       </div>
       <!-- 第二列 -->
       <div class="zdy-two">
-        <h3>巴黎旅游定制服务</h3>
+        <h2>巴黎旅游定制服务</h2>
         <div>
           <p>地址: 湖北省武汉市洪山区</p>
           <p>杨家湾地铁口五环天地</p>
@@ -24,10 +24,10 @@
       </div>
       <!-- 第三列 -->
       <div class="zdy-three">
-        <h3>关注我们</h3>
+        <h2>关注我们</h2>
         <img
           src="../assets/erweima.jpg"
-          style="height: 100px; width: 100px"
+          style="height: 100px; width: 100px; margin-top: 18px"
           alt=""
         />
       </div>
@@ -53,6 +53,7 @@ export default {};
   color: #808080;
   display: flex;
   justify-content: space-evenly;
+  overflow: hidden;
   p {
     margin: 10px 10px 0 0;
   }

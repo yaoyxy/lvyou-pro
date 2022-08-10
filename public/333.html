@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .bj {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: -100;
+    }
+
+    .zdy-a {
+      background: rgba(51, 110, 198, 0.5);
+      color: white;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 80;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
+
 <body>
-  <div>
-    <img src="/src/assets/bj.png" style="width: 100px;height: 100px;" alt="">
-    <img src="/src/assets/lunbotu.png" style="width: 100px;" alt="">
+  <div style="height: 100vh;overflow: hidden;">
+    <div class="zdy-a">
+      <div>
+        <img src="../assets/tubiao.png" alt="" />
+        <h1 style="padding: 25px">AFFORDABLE PARIS TOURS</h1>
+        <span>CITY TOURS / TOUR TICKETS / TOUR GUIDES</span>
+        <br />
+        <button class="btn">VIEW TOURS</button>
+      </div>
+    </div>
+
+    <img class="bj" src="/src/assets/bj.png" style="width: 100%;height: 100%;display: block;" alt="">
+    <video src="/src/assets/video/sy.webm" style="width: 100%;object-fit:fill;" autoplay muted loop alt="">
   </div>
 </body>
+
 </html>
