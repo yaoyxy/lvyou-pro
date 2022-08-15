@@ -1,88 +1,111 @@
 <template>
-  <div class="hhh">
-    <div class="header">
-      <ul class="zdy-zu">
-        <div style="width: 100px;height: 100px;"></div>
-        <img src="../assets/logo.png" alt="" />
-        <li>首页</li>
-        <li> <a href="https://www.baidu.com"> 热门景点</a></li>
-        <li>旅游套餐</li>
-        <li>关于我们</li>
-        <li>客户反馈</li>
-        <li>联系我们</li>
-        <li>旅游签证</li>
-        <li></li>
-        <li></li>
-        <div class="dl" style="color: white">
-          <img src="../assets/denglu.png" alt="" /><span>登录</span>
+    <div class="hhh">
+        <div class="header">
+            <ul class="zdy-zu">
+                <div style="width: 100px; height: 100px"></div>
+                <img src="../assets/index/logo.png" alt="" />
+                <li :class="{ active: isActive === 1 }" @click="changeClass(1)">
+                    首页<span></span>
+                </li>
+                <li :class="{ active: isActive === 2 }" @click="changeClass(2)">
+                    热门景点<span></span>
+                </li>
+                <li :class="{ active: isActive === 3 }" @click="changeClass(3)">
+                    旅游套餐<span></span>
+                </li>
+                <li :class="{ active: isActive === 4 }" @click="changeClass(4)">
+                    关于我们<span></span>
+                </li>
+                <li :class="{ active: isActive === 5 }" @click="changeClass(5)">
+                    客户反馈<span></span>
+                </li>
+                <li :class="{ active: isActive === 6 }" @click="changeClass(6)">
+                    联系我们<span></span>
+                </li>
+                <li :class="{ active: isActive === 7 }" @click="changeClass(7)">
+                    旅游签证<span></span>
+                </li>
+                <div
+                    class="dl"
+                    style="color: white; margin-left: 100px; line-height: 46px"
+                >
+                    <img src="../assets/denglu.png" alt="" /><span>登录</span>
+                </div>
+                <div class="zc" style="color: white; line-height: 46px">
+                    <img src="../assets/zhuce.png" alt="" /><span>注册</span>
+                </div>
+                <div style="width: 100px; height: 100px"></div>
+            </ul>
         </div>
-        <div class="zc" style="color: white">
-          <img src="../assets/zhuce.png" alt="" /><span>注册</span>
-        </div>
-        <div style="width: 100px;height: 100px;"></div>
-      </ul>
     </div>
-  </div>
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            isActive: 1,
+        };
+    },
+    methods: {
+        changeClass(i) {
+            this.isActive = i;
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .zdy-zu {
-  list-style: none;
-  width: 100%;
-  background-color: transparent;
-  // background-color: #000;
-  height: 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
+    list-style: none;
+    width: 100%;
+    background-color: transparent;
+    // background-color: #000;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
 
-  li {
-    font-size: 16px;
-    color: white;
-    padding: 10px;
-    border: 1px solid transparent;
-    position: relative;
-    user-select: none;
-    cursor: pointer;
-    &:after {
-      content: "";
-      position: absolute;
-      border-bottom: 2px solid #fff;
-      left: 50%;
-      right: 50%;
-      bottom: 0;
-      transition: all 0.5s linear;
+    li {
+        font-size: 16px;
+        color: white;
+        padding: 10px;
+        border: 1px solid transparent;
+        position: relative;
+        user-select: none;
+        cursor: pointer;
+        span {
+            position: absolute;
+            border-bottom: 2px solid #fff;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+        }
+        &:hover span {
+            transition: all 0.5s linear;
+            left: 0;
+            right: 0;
+        }
+        &.active span {
+            left: 0;
+            right: 0;
+            transition: all 0.2s linear;
+        }
     }
-    &:hover:after {
-      left: 0;
-      right: 0;
-    }
-  }
 }
-.hhh
-{
-  position: relative;
+.hhh {
+    position: relative;
 }
 .header {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
 }
 
 .dl,
 .zc {
-  user-select: none;
-  cursor: pointer;
+    user-select: none;
+    cursor: pointer;
 }
-
-
-// .el-menu-item:nth-child(n + 1) {
-//   font-size: 20px;
-//   margin-right: 50px;
-// }
 </style>

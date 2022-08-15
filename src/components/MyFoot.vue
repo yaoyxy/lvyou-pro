@@ -26,14 +26,14 @@
       <div class="zdy-three">
         <h2>关注我们</h2>
         <img
-          src="../assets/erweima.jpg"
+          src="../assets/foot/erweima.jpg"
           style="height: 100px; width: 100px; margin-top: 18px"
           alt=""
         />
       </div>
       <!-- 第四列 -->
       <div>
-        <img class="img" src="../assets/xiaotubiao.png" alt="" />
+        <img class="img" src="../assets/foot/xiaotubiao.png" alt="" />
       </div>
     </div>
   </div>
