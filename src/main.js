@@ -9,6 +9,7 @@ import "bootstrap/dist/js/bootstrap.js";
 
 
 import axios from "axios";
+axios.defaults.baseURL = 'http://localhost:3000'
 import VueAxios from "vue-axios";
 Vue.use(VueAxios, axios);
 

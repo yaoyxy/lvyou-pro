@@ -4,9 +4,13 @@
             <ul class="zdy-zu">
                 <div style="width: 100px; height: 100px"></div>
                 <img src="../assets/index/logo.png" alt="" />
-                <li :class="{ active: isActive === 1 }" @click="changeClass(1)">
-                    首页<span></span>
-                </li>
+                <router-link to="/">
+                    <li
+                        :class="{ active: isActive === 1 }"
+                        @click="changeClass(1)"
+                    >
+                        首页<span></span></li
+                ></router-link>
                 <li :class="{ active: isActive === 2 }" @click="changeClass(2)">
                     热门景点<span></span>
                 </li>
@@ -25,15 +29,32 @@
                 <li :class="{ active: isActive === 7 }" @click="changeClass(7)">
                     旅游签证<span></span>
                 </li>
-                <div
-                    class="dl"
-                    style="color: white; margin-left: 100px; line-height: 46px"
-                >
-                    <img src="../assets/denglu.png" alt="" /><span>登录</span>
-                </div>
-                <div class="zc" style="color: white; line-height: 46px">
-                    <img src="../assets/zhuce.png" alt="" /><span>注册</span>
-                </div>
+
+                <router-link to="/login">
+                    <div
+                        class="dl"
+                        style="
+                            color: white;
+                            margin-left: 100px;
+                            line-height: 46px;
+                        "
+                        :class="{ active: isActive === 8 }"
+                        @click="changeClass(8)"
+                    >
+                        <img src="../assets/denglu.png" alt="" />登录
+                    </div>
+                </router-link>
+
+                <router-link to="/register">
+                    <div
+                        class="zc"
+                        style="color: white; line-height: 46px"
+                        :class="{ active: isActive === 9 }"
+                        @click="changeClass(9)"
+                    >
+                        <img src="../assets/zhuce.png" alt="" />注册
+                    </div>
+                </router-link>
                 <div style="width: 100px; height: 100px"></div>
             </ul>
         </div>
@@ -49,6 +70,7 @@ export default {
     },
     methods: {
         changeClass(i) {
+            console.log(i);
             this.isActive = i;
         },
     },
@@ -70,7 +92,7 @@ export default {
         font-size: 16px;
         color: white;
         padding: 10px;
-        border: 1px solid transparent;
+        // border: 1px solid transparent;
         position: relative;
         user-select: none;
         cursor: pointer;

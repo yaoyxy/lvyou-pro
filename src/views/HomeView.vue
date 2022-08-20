@@ -8,7 +8,7 @@
                     <h1 style="padding: 25px">AFFORDABLE PARIS TOURS</h1>
                     <span>CITY TOURS / TOUR TICKETS / TOUR GUIDES</span>
                     <br />
-                    <button class="btn1">VIEW TOURS</button>
+                    <a href="#ss"><button class="btn1">VIEW TOURS</button></a>
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
         </div>
 
         <!-- 版心卡片 -->
-        <div class="cen">
+        <div class="cen" id="ss">
             <!-- 搜索部分 -->
             <div class="zdy-b">
                 <h3>搜索热门旅游景点</h3>
@@ -152,16 +152,7 @@
             <div>
                 <div></div>
                 <div>
-                    <el-steps :active="1">
-                        <el-step title="步骤 1" icon="el-icon-edit"
-                            >12313</el-step
-                        >
-                        <el-step title="步骤 2" icon="el-icon-upload"></el-step>
-                        <el-step
-                            title="步骤 3"
-                            icon="el-icon-picture"
-                        ></el-step>
-                    </el-steps>
+                    <img src="../assets/index/lct.jpg" style="width: 1400px;" alt="">
                 </div>
             </div>
         </div>
@@ -187,7 +178,7 @@ export default {
 	        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
 	        console.log(scrollTop, '滚动距离')
             if(scrollTop == 600){
-                
+
             }
 	    }
 	},

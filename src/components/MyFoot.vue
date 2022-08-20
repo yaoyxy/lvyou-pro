@@ -3,12 +3,12 @@
     <div class="foot">
       <!-- 第一列 -->
       <div class="zdy-one">
-        <h2>联系我们</h2>
+        <h3>联系我们</h3>
         <p>/ contact</p>
       </div>
       <!-- 第二列 -->
       <div class="zdy-two">
-        <h2>巴黎旅游定制服务</h2>
+        <h3>巴黎旅游定制服务</h3>
         <div>
           <p>地址: 湖北省武汉市洪山区</p>
           <p>杨家湾地铁口五环天地</p>
@@ -24,7 +24,7 @@
       </div>
       <!-- 第三列 -->
       <div class="zdy-three">
-        <h2>关注我们</h2>
+        <h3>关注我们</h3>
         <img
           src="../assets/foot/erweima.jpg"
           style="height: 100px; width: 100px; margin-top: 18px"

@@ -21,6 +21,9 @@ export default {
   margin: 0;
   padding: 0;
 }
+a{
+    text-decoration: none !important;
+}
 /* #app {
   width: 100%;
   // width: 1690.67px;
