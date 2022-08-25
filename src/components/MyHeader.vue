@@ -30,45 +30,56 @@
                     旅游签证<span></span>
                 </li>
 
-                <router-link to="/login">
-                    <div
-                        class="dl"
-                        style="
-                            color: white;
-                            margin-left: 100px;
-                            line-height: 46px;
-                        "
-                        :class="{ active: isActive === 8 }"
-                        @click="changeClass(8)"
-                    >
-                        <img src="../assets/denglu.png" alt="" />登录
+                    <div v-if="name">
+                        <span style="margin-left: 100px;line-height: 46px;color: white;user-select: none">
+                            <img src="../assets/denglu.png" alt="">
+                            欢迎: {{name}}
+                        </span>
+                        <span @click="updateUname(null)" style="margin-left: 20px;line-height: 46px;color: white;user-select: none;cursor: pointer;">
+                            <img src="../assets/退出.svg" alt="">
+                            退出
+                        </span>
                     </div>
-                </router-link>
 
-                <router-link to="/register">
-                    <div
-                        class="zc"
-                        style="color: white; line-height: 46px"
-                        :class="{ active: isActive === 9 }"
-                        @click="changeClass(9)"
-                    >
-                        <img src="../assets/zhuce.png" alt="" />注册
+
+                    <div class="dl" style="margin-left: 100px;line-height: 46px;"
+                        v-if="!name"
+                        :class="{ active: isActive === 8 }"
+                        @click="changeClass(8)">
+                        <router-link to="/login" style="color: white;">
+                            <img src="../assets/denglu.png" alt="" /> 登录
+                        </router-link>
                     </div>
-                </router-link>
-                <div style="width: 100px; height: 100px"></div>
+
+                    <div class="zc" style="line-height: 46px"
+                        v-if="!name"
+                        :class="{ active: isActive === 9 }"
+                        @click="changeClass(9)">
+                        <router-link to="/register" style="color: white;">
+                            <img src="../assets/zhuce.png" alt="" /> 注册
+                        </router-link>
+                    </div>
+                <div style="width: 100px; height: 100px">
+                    
+                </div>
             </ul>
         </div>
     </div>
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex';
 export default {
+    computed:{
+        ...mapState(['name'])
+    },
     data() {
         return {
             isActive: 1,
         };
     },
     methods: {
+        ...mapMutations(['updateUname']),
         changeClass(i) {
             console.log(i);
             this.isActive = i;

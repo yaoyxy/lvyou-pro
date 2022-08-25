@@ -58,9 +58,11 @@
             </div>
 
             <!-- 首页卡片 -->
-            <div style="text-align: center">
-                <div class="zdy-kp">
-                    <div class="card" style="width: 24rem">
+            <div style="text-align: center" >
+                <div class="zdy-kp" style="overflow: hidden;">
+                    <div class="card" style="width: 24rem;"
+                    :class="{scroll: isScroll }"
+                    >
                         <img
                             src="../assets/index/kp-1.png"
                             class="card-img-top"
@@ -72,7 +74,9 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 24rem">
+                    <div class="card" style="width: 24rem;"
+                    :class="{scroll: isScroll}"
+                    >
                         <img
                             src="../assets/index/kp-2.png"
                             class="card-img-top"
@@ -84,7 +88,9 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 24rem">
+                    <div class="card" style="width: 24rem"
+                    :class="{scroll: isScroll }"
+                    >
                         <img
                             src="../assets/index/kp-3.png"
                             class="card-img-top"
@@ -96,7 +102,9 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 24rem">
+                    <div class="card" style="width: 24rem"
+                    :class="{scroll: isScroll}"
+                    >
                         <img
                             src="../assets/index/kp-4.png"
                             class="card-img-top"
@@ -108,7 +116,9 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 24rem">
+                    <div class="card" style="width: 24rem"
+                    :class="{scroll: isScroll}"
+                    >
                         <img
                             src="../assets/index/kp-5.png"
                             class="card-img-top"
@@ -120,7 +130,9 @@
                         </div>
                     </div>
 
-                    <div class="card" style="width: 24rem">
+                    <div class="card" style="width: 24rem"
+                    :class="{scroll: isScroll }"
+                    >
                         <img
                             src="../assets/index/kp-6.png"
                             class="card-img-top"
@@ -148,11 +160,42 @@
                 <p>CITY TOURS / TOUR TICKETS / TOUR GUIDES</p>
             </div>
         </div>
-        <div style="height: 800px; background: white">
+
+        <!-- 流程模块 -->
+        <div class="lc" style="height: 600px; background: white">
+            <div class="lc-title">
+                <div class="lc-t">服务流程</div>
+                <div class="lc-d">CITY TOURS / TOUR TICKETS / TOUR GUIDES</div>
+            </div>
+            <img class="lc-bj" src="../assets/index/lc-bj.png" alt="">
+        </div>
+
+        <!-- 热门景点 -->
+        <div class="foot-jd">
             <div>
-                <div></div>
-                <div>
-                    <img src="../assets/index/lct.jpg" style="width: 1400px;" alt="">
+                <div class="foot-title">巴黎热门旅游景点</div>
+                <div class="foot-duan">Qsque at tortr a rcu. Curab equat</div>
+            </div>
+            <div style="display:flex;justify-content: space-between;margin:50px auto;width:1200px;">
+                <div class="foot-card">
+                    <img src="../assets/about/dingwei.png" style="width: 90px" :class="{animationed: animated1}" @mousemove="onAnimated1">
+                    <h5><span style="color:#db5068">+120</span> 高端旅游</h5>
+                    <p>作为世界的浪漫之都、艺术之都、时尚之都，巴黎永远是旅游热门地的选择之一，每年吸引了世界各地的游人前往。</p>
+                    <button>了解更多</button>
+                </div>
+
+                <div class="foot-card">
+                    <img src="../assets/about/renxiang.png" style="width: 90px" :class="{animationed: animated2}" @mousemove="onAnimated2">
+                    <h5><span style="color:#db5068">+120</span> 高端旅游</h5>
+                    <p>作为世界的浪漫之都、艺术之都、时尚之都，巴黎永远是旅游热门地的选择之一，每年吸引了世界各地的游人前往。</p>
+                    <button>了解更多</button>
+                </div>
+
+                <div class="foot-card">
+                    <img src="../assets/about/touxiang.png" style="width: 90px" :class="{animationed: animated3}" @mousemove="onAnimated3">
+                    <h5><span style="color:#db5068">+120</span> 高端旅游</h5>
+                    <p>作为世界的浪漫之都、艺术之都、时尚之都，巴黎永远是旅游热门地的选择之一，每年吸引了世界各地的游人前往。</p>
+                    <button>了解更多</button>
                 </div>
             </div>
         </div>
@@ -165,7 +208,11 @@ export default {
 		return {
 			topNavBg: {
         		backgroundColor: ''
-      		}
+      		},
+            isScroll:'',
+            animated1:false,
+            animated2:false,
+            animated3:false,
 		}
 	},
 	// 滚动监听
@@ -173,20 +220,48 @@ export default {
     	window.addEventListener('scroll', this.handleScroll) // 监听页面滚动
     },
     methods: {
+        onAnimated1(){
+            if(!this.animated1)
+            {
+                this.animated1 = true
+                setTimeout(() => {
+                    this.animated1 = ''
+                }, 1000);
+            }
+        },
+        onAnimated2(){
+            if(!this.animated2)
+            {
+                this.animated2 = true
+                setTimeout(() => {
+                    this.animated2 = ''
+                }, 1000);
+            }
+        },
+        onAnimated3(){
+            if(!this.animated3)
+            {
+                this.animated3 = true
+                setTimeout(() => {
+                    this.animated3 = ''
+                }, 1000);
+            }
+        },
 		// 获取页面滚动距离
 	    handleScroll () {
 	        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
 	        console.log(scrollTop, '滚动距离')
-            if(scrollTop == 600){
-
+            if(scrollTop >= 700){
+                console.log('回传成功',scrollTop);
+                this.isScroll = true
             }
 	    }
 	},
 
 	// 滚动重置
-    	beforeDestroy () {
-      		window.removeEventListener('scroll', this.handleScroll)
-    	},
+    	// beforeDestroy () {
+      	// 	window.removeEventListener('scroll', this.handleScroll)
+    	// },
 }
 
 
@@ -216,6 +291,7 @@ export default {
     align-items: center;
     div h1 {
         font-size: 48px;
+        font-weight: 800;
     }
     span {
         font-size: 18px;
@@ -237,6 +313,42 @@ export default {
         }
     }
 }
+
+ @keyframes ball {
+      0% {
+        transform: translateY(400px);
+        opacity: 0;
+        // visibility: hidden;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+        // visibility: visible;
+      }
+    }
+    
+    .card{
+        // visibility: hidden;
+        opacity: 0;
+    }
+    .scroll:nth-child(1) {
+        animation: ball 1s 0.1s forwards;
+    }
+    .scroll:nth-child(2) {
+        animation: ball 1s 0.2s forwards;
+    }
+    .scroll:nth-child(3) {
+        animation: ball 1s 0.3s forwards;
+    }
+    .scroll:nth-child(4) {
+        animation: ball 1s 0.4s forwards;
+    }
+    .scroll:nth-child(5) {
+        animation: ball 1s 0.5s forwards;
+    }
+    .scroll:nth-child(6) {
+        animation: ball 1s 0.6s forwards;
+    }
 
 // 版心卡片
 .cen {
@@ -361,4 +473,93 @@ export default {
         }
     }
 }
+
+// 流程模块
+.lc{
+    text-align: center;
+    .lc-title{
+        padding: 80px;
+        .lc-t{
+            font-size: 25px;
+            color: #616361;
+            margin-bottom: 20px;
+        }
+        .lc-d{
+            color: #a9a9a9;
+        }
+    }
+    .lc-bj{
+        width: 1300px;
+        user-select: none;
+    }
+}
+
+// 底部热门景点
+.foot-jd{
+    background-color: #f4f4f4;
+    height: 700px;
+    text-align: center;
+    padding: 80px;
+    .foot-title{
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: #616361;
+    }
+    .foot-duan{
+        color: #a9a9a9;
+    }
+    .foot-card{
+        width: 350px;
+        height: 400px;
+        background-color: #fefefe;
+        padding: 30px;
+        border: 2px solid rgba($color: #f4f4f4, $alpha: 0.4);
+        border-radius: 10px;
+        img{
+            margin-bottom: 20px;
+        }
+        .animationed{
+            animation:foot 1s;
+        } 
+        h5{
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 25px;
+            color: #808080;
+            margin-bottom: 20px;
+        }
+        button{
+            width: 150px;
+            border: 0;
+            background: #f08767;
+            color: #fff;
+            line-height: 30px;
+            font-weight: 800;
+            border-radius: 5px;
+            &:hover{
+                color: #f08767;
+                background-color: #fff;
+                border: 1px solid #f08767;
+                transition: 0.3s;
+            }
+            &:active{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+// 底部关于我们
+ @keyframes foot {
+    0% {
+        transform: scaleX(-1);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 </style>

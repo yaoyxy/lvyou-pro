@@ -7,47 +7,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    * {
-      padding: 0;
-      margin: 0;
+    @keyframes ball {
+      0% {
+        transform: translateY(400px);
+      }
+
+      /* 25% {transform: translateY(200px)} */
+      /* 50% {transform: translateY(400px)} */
+      /* 75% {transform: translateY(0,300px);} */
+      100% {
+        transform: translateY(0, 0);
+        /* visibility: visible; */
+      }
     }
 
-    .bj {
-      width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: -100;
-    }
-
-    .zdy-a {
-      background: rgba(51, 110, 198, 0.5);
-      color: white;
-      text-align: center;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: 80;
+    .zdy-kp {
+      margin: 0 auto;
+      width: 1400px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 400px;
+      box-sizing: border-box;
+      margin: 10px 10px;
+      background-color: pink;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+
+    .card:nth-child(1) {
+      animation: ball 1s 0.1s;
+      visibility: visible;
+    }
+
+    .card:nth-child(2) {
+      animation: ball 1s 0.2s;
+      visibility: visible;
+    }
+
+    .card:nth-child(3) {
+      animation: ball 1s 0.3s;
+      visibility: visible;
+    }
+
+    .card:nth-child(4) {
+      animation: ball 1s 0.4s;
+      visibility: visible;
+    }
+
+    .card:nth-child(5) {
+      animation: ball 1s 0.5s;
+      visibility: visible;
+    }
+
+    .card:nth-child(6) {
+      animation: ball 1s 0.6s;
+      visibility: visible;
     }
   </style>
 </head>
 
 <body>
-  <div style="height: 100vh;overflow: hidden;">
-    <div class="zdy-a">
-      <div>
-        <img src="../assets/tubiao.png" alt="" />
-        <h1 style="padding: 25px">AFFORDABLE PARIS TOURS</h1>
-        <span>CITY TOURS / TOUR TICKETS / TOUR GUIDES</span>
-        <br />
-        <button class="btn">VIEW TOURS</button>
+  <!-- <div style="height: 2000px;">linearsdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div> -->
+  <div class="zdy-kp">
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-1.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">卢浮宫</p>
+        <p>客户评分: ★★★★★</p>
       </div>
     </div>
 
-    <img class="bj" src="/src/assets/bj.png" style="width: 100%;height: 100%;display: block;" alt="">
-    <video src="/src/assets/video/sy.webm" style="width: 100%;object-fit:fill;" autoplay muted loop alt="">
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-2.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">蓬皮杜中心</p>
+        <p>客户评分: ★★★★★</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-3.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">塞纳河</p>
+        <p>客户评分: ★★★★★</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-4.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">巴黎圣母院</p>
+        <p>客户评分: ★★★★★</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-5.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">凯旋门</p>
+        <p>客户评分: ★★★★★</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 24rem">
+      <img src="../src/assets/index/kp-6.png" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <p class="card-text">圣心大教堂</p>
+        <p>客户评分: ★★★★★</p>
+      </div>
+    </div>
   </div>
 </body>
 

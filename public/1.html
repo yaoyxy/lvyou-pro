@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span style="color:green;">Hello</span>
+    </div>
+    <script>
+
+        // (function(){})()
+
+
+        // (function(){} (function(){}())   )
+        var num = 10
+        // ;(function(){
+        //     // this.n
+        //     n=12
+        //     console.log(this.n);
+        // })()
+
+        var obj = {
+            num: 5,
+            fn:()=>{
+                console.log(this.num)
+            }
+        }
+
+        obj.fn()
+
+
+
+        // var a = 10;
+        // var test = (function (a) {
+        //     this.a = a;
+        //     // console.log(this.a) //3
+        //     return function (b) {
+        //         // console.log(b)
+        //         return this.a + b;
+        //     }
+        // }
+
+        //     (function (a, b) {
+        //         return a;
+        //     }(3, 4))
+        // );
+        // console.log(a)
+        // console.log(test(5));
+    </script>
+
+</body>
+
+</html>

@@ -46,7 +46,8 @@ export default {};
 <style lang="scss" scoped>
 .foot {
   width: 1000px;
-  height: 150px;
+  height: 300px;
+  padding-top: 50px;
   margin: 0 auto;
   background: white;
   font-size: 12px;
@@ -63,8 +64,10 @@ export default {};
   margin: 15px 15px 10px 0;
 }
 .img {
+  display: block;
   width: 32px;
   height: 32px;
   background-position: -128px 0;
+  
 }
 </style>
