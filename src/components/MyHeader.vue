@@ -11,9 +11,11 @@
                     >
                         首页<span></span></li
                 ></router-link>
-                <li :class="{ active: isActive === 2 }" @click="changeClass(2)">
-                    热门景点<span></span>
-                </li>
+                <router-link to="/prodetail">
+                    <li :class="{ active: isActive === 2 }" @click="changeClass(2)">
+                        热门景点<span></span>
+                    </li>
+                </router-link>
                 <li :class="{ active: isActive === 3 }" @click="changeClass(3)">
                     旅游套餐<span></span>
                 </li>

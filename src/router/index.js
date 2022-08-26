@@ -6,6 +6,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/prodetail',
+    name: 'prodetail',
+    component: () => import('../views/ProDetail.vue'),
+    meta:{
+      titile:'巴黎旅游 | 热门景点'
+    }
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('../views/Login.vue'),
